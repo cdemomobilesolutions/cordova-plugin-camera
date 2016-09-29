@@ -746,6 +746,14 @@ static NSString* toBase64(NSData* data) {
     [super viewWillAppear:animated];
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
 + (instancetype) createFromPictureOptions:(CDVPictureOptions*)pictureOptions;
 {
     CDVCameraPicker* cameraPicker = [[CDVCameraPicker alloc] init];
